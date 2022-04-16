@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: HomeBody(),
-      bottomNavigationBar: HomeBottomNagivationBar(),
+      //bottomNavigationBar: HomeBottomNagivationBar(),
     );
   }
 
@@ -21,11 +21,18 @@ class HomeScreen extends StatelessWidget {
     return AppBar(
         backgroundColor: kPrimaryColor,
         elevation: 0,
-        leading: IconButton(
+        title: Text("Plant App",style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+             ),
+           ),
+           );
+
+        /*leading: IconButton(
           icon: SvgPicture.asset("assets/icons/menu.svg"),
           onPressed: () {}
         ),
-      );
+      );*/
   }
 }
 

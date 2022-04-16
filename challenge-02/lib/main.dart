@@ -1,6 +1,8 @@
 import 'package:challenge_ui_plant_app/constants.dart';
 import 'package:challenge_ui_plant_app/screens/home/home_screen.dart';
+import 'package:challenge_ui_plant_app/screens/splash/splash.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const PlantApp());
@@ -19,7 +21,7 @@ class PlantApp extends StatelessWidget {
         scaffoldBackgroundColor: kBackgroundColor,
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
       ),
-      home: const HomeScreen(),
+      home: Splash()//const HomeScreen(),
     );
   }
 }

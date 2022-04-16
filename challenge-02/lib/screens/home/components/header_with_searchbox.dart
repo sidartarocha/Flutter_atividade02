@@ -33,17 +33,17 @@ class HeaderWithSearchBox extends StatelessWidget {
                 bottomRight: Radius.circular(36),
               ),
             ),
-            child: Row(
-              children: [
-                Text(
-                  "Plant App",
-                  style: Theme.of(context).textTheme.headline5!.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                  ),
-                ),
-              ],
-            ),
+            // child: Row(
+            //   children: [
+            //     Text(
+            //       "Plant App",
+            //       style: Theme.of(context).textTheme.headline5!.copyWith(
+            //         color: Colors.white,
+            //         fontWeight: FontWeight.bold
+            //       ),
+            //     ),
+            //   ],
+            // ),
           ),
 
           Positioned(
@@ -54,7 +54,7 @@ class HeaderWithSearchBox extends StatelessWidget {
               alignment: Alignment.center,
               margin: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-              height: 54,
+              height: 50,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -75,7 +75,12 @@ class HeaderWithSearchBox extends StatelessWidget {
                       ),
                       enabledBorder: InputBorder.none,
                       focusedBorder: InputBorder.none,
-                      suffixIcon: SvgPicture.asset("assets/icons/search.svg")
+                      suffixIconConstraints: BoxConstraints(
+                      minHeight: 24,
+                      minWidth: 24
+                      ),
+                      suffixIcon:
+                          SvgPicture.asset("assets/icons/search.svg")
                     ),
                   ),
                 ),

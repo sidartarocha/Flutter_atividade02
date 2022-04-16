@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:challenge_ui_plant_app/constants.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -7,6 +10,7 @@ class RecomendedPlanCard extends StatelessWidget {
   final String title;
   final String country;
   final int price;
+  final bool fav ;
   final Function? onPressed;
 
   const RecomendedPlanCard({
@@ -15,7 +19,9 @@ class RecomendedPlanCard extends StatelessWidget {
     required this.title,
     required this.country,
     required this.price,
-    this.onPressed, 
+    this.fav = false,
+    this.onPressed,
+
   }) : super(key: key);
 
   @override
@@ -30,6 +36,10 @@ class RecomendedPlanCard extends StatelessWidget {
       width: screenSize.width * 0.4,
       child: Column(
         children: [
+          IconButton(
+            icon: fav ? Icon(Icons.favorite) : Icon(Icons.favorite_border_outlined) ,
+            color: Colors.red,
+            onPressed:(){},),
           Image.asset(image),
           Container(
             padding: const EdgeInsets.all(kDefaultPadding / 2),
