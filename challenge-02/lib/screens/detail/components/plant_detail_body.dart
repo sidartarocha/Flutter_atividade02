@@ -56,7 +56,16 @@ class PlantDetailBody extends StatelessWidget {
                     )
                   )
                 ),
-                onPressed: () {  },
+                onPressed: () {
+                  final snackBar = SnackBar(
+                    content: const Text('A funcionalidade de compra não foi implementada'),
+                    action: SnackBarAction(
+                      label: 'Undo',
+                      onPressed: () {},
+                    ),
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                },
               ),
             ),
             

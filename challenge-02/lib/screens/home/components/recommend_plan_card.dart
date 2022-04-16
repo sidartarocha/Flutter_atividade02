@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:challenge_ui_plant_app/constants.dart';
+import 'package:challenge_ui_plant_app/screens/detail/plant_detail_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,20 @@ class RecomendedPlanCard extends StatelessWidget {
             icon: fav ? Icon(Icons.favorite) : Icon(Icons.favorite_border_outlined) ,
             color: Colors.red,
             onPressed:(){},),
-          Image.asset(image),
+          InkWell(
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PlantDetailScreen()),
+              );
+            },
+            child: Ink.image(
+                  image:AssetImage(image),
+                //fit: BoxFit.cover
+              width: 160,
+              height: 160,
+            ),
+          ),
           Container(
             padding: const EdgeInsets.all(kDefaultPadding / 2),
             decoration: BoxDecoration(
