@@ -12,7 +12,7 @@ class RecomemdedPlantList extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: [
+        /*children: [
           const RecomendedPlanCard(
             image: "assets/images/image_1.png",
             title: "Samatha",
@@ -34,7 +34,7 @@ class RecomemdedPlantList extends StatelessWidget {
             price: 445,
             fav: true,
           ),
-        ],
+        ],*/
       ),
     );
   }

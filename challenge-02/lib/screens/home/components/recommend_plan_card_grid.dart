@@ -7,7 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-class RecomendedPlanCard extends StatelessWidget {
+class RecomendedPlanCardGrid extends StatelessWidget {
   final String image;
   final String title;
   final String country;
@@ -16,7 +16,7 @@ class RecomendedPlanCard extends StatelessWidget {
   final Function? onPressed;
   final Plantas elem;
 
-  const RecomendedPlanCard({
+  const RecomendedPlanCardGrid({
     Key? key, 
     required this.image,
     required this.title,
@@ -35,16 +35,16 @@ class RecomendedPlanCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(
         left: kDefaultPadding,
-        top: kDefaultPadding / 2,
-        bottom: kDefaultPadding * 1.5,
+        top: kDefaultPadding / 2.5,
+        bottom: kDefaultPadding ,
       ),
-      width: screenSize.width * 0.4,
+      width: screenSize.width ,
       child: Column(
         children: [
-          IconButton(
+        /*IconButton(
             icon: fav ? Icon(Icons.favorite) : Icon(Icons.favorite_border_outlined) ,
             color: Colors.red,
-            onPressed:(){},),
+            onPressed:(){},),*/
           InkWell(
             onTap: (){
               Navigator.push(
