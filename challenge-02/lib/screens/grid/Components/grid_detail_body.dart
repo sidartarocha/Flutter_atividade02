@@ -2,6 +2,7 @@ import 'package:challenge_ui_plant_app/repository/plantas.dart';
 import 'package:challenge_ui_plant_app/screens/home/components/recommend_plan_card_grid.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 
 import '../../home/components/recommend_plan_card.dart';
 
@@ -16,13 +17,13 @@ class GridDetailBody extends StatefulWidget {
 class _GridDetailBodyState extends State<GridDetailBody> {
   @override
   Widget build(BuildContext context) {
-    const title = 'Grid List';
+    var title = 'gridList'.i18n();
 
     return MaterialApp(
         title: title,
         home: Scaffold(
           appBar: AppBar(
-            title: const Text(title),
+            title: Text(title),
           ),
           body: GridView.count(
             // Create a grid with 2 columns. If you change the scrollDirection to

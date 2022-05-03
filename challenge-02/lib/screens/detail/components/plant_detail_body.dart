@@ -1,6 +1,7 @@
 
 import 'package:challenge_ui_plant_app/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 
 import '../../../repository/plantas.dart';
 
@@ -22,7 +23,7 @@ class _PlantDetailBodyState extends State<PlantDetailBody> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Detalhes'),
+          title: Text('details'.i18n()),
         ),
     body: Column(
       children: [
@@ -35,18 +36,18 @@ class _PlantDetailBodyState extends State<PlantDetailBody> {
                         text: TextSpan(
                             children: [
                               TextSpan(
-                                  text: 'Nome: ' + widget.planta.title.toUpperCase() + '\n' ,
+                                  text: 'name'.i18n()+': ' + widget.planta.title.toUpperCase() + '\n' ,
                                   style: Theme.of(context).textTheme.headline5
                               ),
                               TextSpan(
-                                  text: 'Preço: ' + widget.planta.price.toString() ,
+                                  text: 'price'.i18n()+': ' + widget.planta.price.toString() ,
                                   style: const TextStyle(
                                       fontSize: 16,
                                       color: kPrimaryColor
                                   )
                               ),
                               TextSpan(
-                                  text: 'Descrição: ' + widget.planta.country ,
+                                  text: 'description'.i18n() + ': ' + widget.planta.country ,
                                   style: const TextStyle(
                                       fontSize: 16,
                                       color: kPrimaryColor
@@ -88,14 +89,14 @@ class _PlantDetailBodyState extends State<PlantDetailBody> {
                   text: TextSpan(
                       children: [
                         TextSpan(
-                            text: 'Pais: ' + widget.planta.country ,
+                            text: 'country'.i18n()+': ' + widget.planta.country ,
                             style: const TextStyle(
                                 fontSize: 16,
                                 color: kPrimaryColor
                             )
                         ),
                         TextSpan(
-                            text: 'Nivel de Cuidado: ' + widget.planta.title,
+                            text: 'levelCare'.i18n() +': ' + widget.planta.title,
                             style: const TextStyle(
                                 fontSize: 16,
                                 color: kPrimaryColor
@@ -112,7 +113,7 @@ class _PlantDetailBodyState extends State<PlantDetailBody> {
               width: size.width / 2,
               height: 84,
               child: ElevatedButton(
-                child: const Text("Buy Now"),
+                child: Text('buy'.i18n()),
                 style: ElevatedButton.styleFrom(
                   primary: kPrimaryColor,
                   shape: const RoundedRectangleBorder(
@@ -123,7 +124,7 @@ class _PlantDetailBodyState extends State<PlantDetailBody> {
                 ),
                 onPressed: () {
                   final snackBar = SnackBar(
-                    content: const Text('A funcionalidade de compra não foi implementada'),
+                    content: Text('msgBuyNot'.i18n()),
                     action: SnackBarAction(
                       label: 'Undo',
                       onPressed: () {},

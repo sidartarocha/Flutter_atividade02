@@ -5,6 +5,7 @@ import 'package:challenge_ui_plant_app/repository/repository.dart';
 import 'package:challenge_ui_plant_app/screens/home/components/recomemded_plan_list2.dart';
 import 'package:challenge_ui_plant_app/screens/home/components/recommend_plan_card.dart';
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 
 import '../../grid/grid_screen.dart';
 import 'header_with_searchbox.dart';
@@ -31,8 +32,8 @@ class _HomeBodyState extends State<HomeBody> {
         children: [
           HeaderWithSearchBox(screenSize: screenSize),
           TitleWithButtonRow(
-            title: "Favorite Plants",
-            buttonText: "More",
+            title: 'favoriteplant'.i18n(),
+            buttonText: 'more'.i18n(),
             onPressed: () {
               Navigator.push(
                 context,
@@ -42,8 +43,8 @@ class _HomeBodyState extends State<HomeBody> {
           ),
           RecomemdedPlantList2(data),
           TitleWithButtonRow(
-            title: "All Plants",
-            buttonText: "More",
+            title: 'allPlants'.i18n(),
+            buttonText: 'more'.i18n(),
             onPressed: () {},
           ),
            RecomemdedPlantList2(data),

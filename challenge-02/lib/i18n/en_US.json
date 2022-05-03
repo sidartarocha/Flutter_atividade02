@@ -1,0 +1,18 @@
+{
+  "welcome": "Welcome!",
+  "plantApp" : "Plant App",
+  "favoriteplant": "Favorite Plants",
+  "allPlants": "All Plants",
+  "more": "More",
+  "details": "Details",
+  "buy": "Buy Now",
+  "msgBuyNot":"Purchase, functionality not implemented",
+  "undo" : "Undo",
+  "name": "Name",
+  "price": "Price",
+  "description" : "Description",
+  "country": "Country",
+  "levelCare":"Level of Care",
+  "gridList": "Grid List"
+
+}

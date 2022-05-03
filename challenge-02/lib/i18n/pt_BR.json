@@ -1,0 +1,17 @@
+{
+  "welcome": "Bem Vindo!",
+  "plantApp" : "App Plantas",
+  "favoriteplant": "Plantas Favoritas",
+  "allPlants": "Todas as Plantas",
+  "more": "Mais",
+  "details": "Detalhes",
+  "buy": "Compre Agora",
+  "msgBuyNot": "A funcionalidade de compra não foi implementada",
+  "undo" : "Desfazer",
+  "name": "Nome",
+  "price": "Preço",
+  "description" : "Descrição",
+  "country": "Pais",
+  "levelCare":"Nível de Cuidados",
+  "gridList": "Lista em Grade"
+}

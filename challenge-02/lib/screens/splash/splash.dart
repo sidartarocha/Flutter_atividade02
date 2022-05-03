@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 
 import '../home/home_screen.dart';
 
@@ -29,7 +30,8 @@ class _SplashState extends State<Splash> {
       body: Center(
         child: Container(
           child: Text(
-              'FLUTTER PLANT APP UI',
+              'FLUTTER PLANT APP UI\n\n'+'welcome'.i18n(),
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
