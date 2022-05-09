@@ -96,7 +96,7 @@ class _PlantDetailBodyState extends State<PlantDetailBody> {
                             )
                         ),
                         TextSpan(
-                            text: 'levelCare'.i18n() +': ' + widget.planta.title,
+                            text: 'levelCare'.i18n() +': ' + widget.planta.cuidado,
                             style: const TextStyle(
                                 fontSize: 16,
                                 color: kPrimaryColor
